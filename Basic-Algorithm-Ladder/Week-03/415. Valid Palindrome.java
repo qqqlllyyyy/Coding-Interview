@@ -36,6 +36,10 @@ public class Solution {
     }
 }
 
-/*
+/*  2016-07-20
     这里终止循环的判别条件是第一次遇到首尾不等，就停止，然后 front++, end-- 看是否 end <= front.
+*/
+
+/*  2016-08-03
+    函数返回'end<=front'有点tricky, 其实可以把第25行改成'return false;', 把31行改成'return true', 也能通过
 */
