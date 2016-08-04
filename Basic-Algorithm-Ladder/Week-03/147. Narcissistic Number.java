@@ -27,3 +27,7 @@ class Solution {
         return result;
     }
 };
+
+/*  2016-08-04
+    注意 Math.pow 的返回类型是 double, 所以第18行必须有 (int) !
+*/
