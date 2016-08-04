@@ -13,7 +13,7 @@ public class Solution {
         int max = Integer.MIN_VALUE;
         int max_2 = Integer.MIN_VALUE;
         
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.length; i++){ // 也可用 for (int value : nums) { }的写法
             if(nums[i] > max){
                 max_2 = max;
                 max = nums[i];
