@@ -1,0 +1,33 @@
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class Solution {
+    /**
+     * @param a, b, the root of binary trees.
+     * @return true if they are tweaked identical, or false.
+     */
+    public boolean isTweakedIdentical(TreeNode a, TreeNode b) {
+        // Write your code here
+        if (a == null && b == null) {
+            return true;
+        }
+        if (a == null && b != null || a != null && b == null || a.val != b.val) { // 别忘了最后一个条件
+            return false;
+        }
+        if (isTweakedIdentical(a.left, b.left) && isTweakedIdentical(a.right, b.right)) {
+            return true;
+        }
+        if (isTweakedIdentical(a.left, b.right) && isTweakedIdentical(a.right, b.left)) {
+            return true;
+        }
+        return false;
+    }
+}
