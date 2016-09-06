@@ -38,3 +38,8 @@ class Solution {
     所有对于list的操作都会对其指向的object操作。
     从而在最后remove完所有数字后，list永远是空集。
 */
+
+/*  20160906
+    22行再次出错，忘记用 new ArrayList<Integer>(list) 而直接用的 list;
+    25行最后直接用 i, 忘记加1
+*/
