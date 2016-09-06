@@ -50,3 +50,10 @@ class Solution {
     特别注意 29 行不能写成 28 行，因为如果有多个重复元素，28行无法判断是哪个。
     而为了唯一性，我们强制要求相同的数字，原来排在前面的，在结果当中也应该排在前面。
 */
+
+/*  20160906
+    重做本题错在第12行，定义visited的时候使用了ArrayList<Integer>而未用int[]
+    必须使用后者的原因是在后面的helper函数中要检查visited[i],
+    而新定义的 ArrayList<Integer> 是没有长度的，
+    ArrayList 的constructor function如果input是数字，那个数字代表的是ArrayList的capacity而不是size!!!
+*/
