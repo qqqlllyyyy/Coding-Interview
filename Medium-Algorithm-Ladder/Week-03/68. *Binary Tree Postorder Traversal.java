@@ -73,3 +73,8 @@ public ArrayList<Integer> postorderTraversal(TreeNode root) {
 
     return result;
 }
+
+/*
+    理解 68，69 两行，只有当某节点的左右节点全部访问过之后，才可以把它本身放到 result 中，
+    也要把它从 stack 中取出。
+*/
